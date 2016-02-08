@@ -1,0 +1,31 @@
+# daemon info
+Port 8631
+Protocol 2
+ServerKeyBits 1024
+HostKey /etc/ssh/ssh_host_rsa_key
+HostKey /etc/ssh/ssh_host_dsa_key
+
+# logs
+LogLevel INFO
+
+# security
+PasswordAuthentication no
+PermitEmptyPasswords no
+PermitRootLogin no
+UsePAM yes
+LoginGraceTime 30
+UsePrivilegeSeparation yes
+KeyRegenerationInterval 3600
+StrictModes yes
+PubkeyAuthentication yes
+HostbasedAuthentication no
+SyslogFacility AUTH
+RSAAuthentication yes
+ChallengeResponseAuthentication no
+IgnoreRhosts yes
+
+# general
+TCPKeepAlive yes
+PrintLastLog no
+PrintMotd no
+Subsystem sftp /usr/lib/openssh/sftp-server
